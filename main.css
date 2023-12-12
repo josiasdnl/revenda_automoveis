@@ -6,28 +6,35 @@
     list-style: none;
 }
 
-h2 {
-    margin-bottom: 16px;
+html {
+    overflow-x: hidden;
 }
 
-#show-room a {
-    color: #fff;
-    background-color: #479861;
-    padding: 4px;
-    margin-top: 8px;
-    border: none;
+.container {
+    max-width: 1000px;
     width: 100%;
-    border-radius: 4px;
+    margin: 0 auto;
 }
 
-header {
+header, footer {
     color: #fff;
     background-color: #192a56;
     padding-top: 16px;
 }
 
-header > .container {
-    display: flex;
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header ul li {
+    margin-right: 16px;
+}
+
+header > .container,
+footer > .container {
     justify-content: space-between;
     align-items: center;          /*Alinhar na vertical*/
     padding-bottom: 16px;
@@ -36,6 +43,7 @@ header > .container {
 nav {
     background-color: #575fcf;
     padding: 16px 0;
+    display: none;
 }
 
 nav li {
@@ -43,7 +51,7 @@ nav li {
     margin-right: 16px;
     font-size: 18px;
     font-weight: bold;
-    text-transform: uppercase;  /*Deixa tudo maiúsculo*/
+    text-transform: uppercase;
 }
 
 nav li a {
@@ -53,6 +61,7 @@ nav li a {
 
 .menu-hamburguer {
     width: 32px;
+    cursor: pointer;
 }
 
 .menu-hamburguer span {
@@ -63,42 +72,101 @@ nav li a {
     margin-bottom: 4px;
 }
 
-header ul li {
-    margin-right: 16px;
-}
-
-#carrossel img {
-    width: 100%;
-}
-
-.container {
-    margin: 0px auto;
-    max-width: 1000px;
-    width: 100%;
-}
-
-#sobre-nos {
+.container-flex {
     display: flex;
 }
 
-#sobre-nos img {
-    height: 200px;
+#sobre-a-loja img {
+    max-width: 400px;
+    margin-right: 24px;
 }
 
-#sobre-nos-texto {
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+
+.lista-veiculos {
+    flex-wrap: wrap;
+}
+
+.lista-veiculos li {
+    max-width: 30%;
+    margin-bottom: 24px;
+}
+
+.lista-veiculos li img {
+    max-width: 100%;
+}
+
+.lista-veiculos li h3 {
+    margin: 16px 0;
+}
+
+.item-central {
+    margin: 0 1%;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #119759;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.price {
+    margin: 16px 0;
+    display: block;
+}
+
+.price del {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.form-campo {
+    margin-bottom: 16px;
+}
+
+.form-campo label {
+    font-weight: bold;
+    display: block;
+}
+
+.form-campo input,
+.form-campo textarea {
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+
+.form-campo textarea {
+    resize: none;
+    height: 120px;
+}
+
+form {
+    max-width: 360px;
+}
+
+form button {
+    max-width: 120px;
+}
+
+footer li {
     margin-left: 16px;
 }
 
-#show-room ul {
-    display: flex;
-    text-decoration: none;
-}
-
-#show-room img {
-    height: 150px;
-}
-
-#show-room li {
-    justify-content: space-between;
-    margin: 8px;
+footer li img {
+    height: 32px;
 }
